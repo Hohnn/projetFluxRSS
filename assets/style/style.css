@@ -1,3 +1,7 @@
+body {
+  background-color: #191b1c;
+}
+
 body header nav {
   background-color: rgba(0, 0, 0, 0.493);
   width: 100%;
@@ -11,7 +15,6 @@ body header .myCarousel {
 }
 
 body main {
-  background-color: #191b1c;
   color: white;
 }
 
