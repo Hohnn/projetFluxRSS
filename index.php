@@ -121,14 +121,14 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="title orangeTag">
+                    <div class="title bleuTag">
                         <div class="tag">actus pc</div>
                         <div class="desc text-muted">Toutes l'actualité sur pc</div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <?= loop() ?>
+            <?= displayArticle($fluxActus, $fluxMobile, $fluxMulti) ?>
             </div>
         </div>
     </main>

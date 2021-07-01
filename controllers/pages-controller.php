@@ -1,1 +1,53 @@
-<!-- init -->
+<?php
+
+/* - l'actualité : https://www.jeuxactu.com/rss/ja.rss
+- les tests : https://www.jeuxactu.com/rss/tests.rss
+- Actus mobile : https://www.jeuxactu.com/rss/mobile.rss
+- Actus PC : https://www.jeuxactu.com/rss/pc.rss
+- Actus multi : https://www.jeuxactu.com/rss/multi.rss */
+
+$fluxPC = 'https://www.jeuxactu.com/rss/pc.rss';
+$fluxActus = 'https://www.jeuxactu.com/rss/ja.rss';
+$fluxTest = 'https://www.jeuxactu.com/rss/tests.rss';
+$fluxMobile = 'https://www.jeuxactu.com/rss/mobile.rss';
+$fluxMulti = 'https://www.jeuxactu.com/rss/multi.rss';
+
+
+function displayCard($i, $link, $color){
+    $doc = simplexml_load_file($link);
+    $imgUrl = $doc->channel->item[$i]->enclosure["url"];
+    $title = $doc->channel->item[$i]->title;
+    $desc = $doc->channel->item[$i]->description;
+    $source = $doc->channel->item[$i]->link; ?>
+        <div class="col-lg-6">
+            <div class="card mb-3 mycard <?= $color ?>">
+                <div class="row g-0">
+                    <div class="col-md-5">
+                        <img src="<?= ($imgUrl)  ?>" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-7">
+                        <div class="card-body mybody">
+                            <h5 class="card-title"><?= ($title) ?></h5>
+                            <p class="card-text"><small class="text-muted">Date</small></p>
+                            <div class="link">
+                                <button class="mybtn">Voir plus</button>
+                                <a href="<?= ($source) ?>" class="mybtn">Article</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php
+}
+
+
+function displayArticle($flux1, $flux2, $flux3){
+    for ($i = 1; $i <= 12; $i++) {
+        displayCard($i, $flux1, 'red');
+        displayCard($i, $flux2, 'yellow');
+        displayCard($i, $flux3, 'bleu');
+    }
+}
+
+?>

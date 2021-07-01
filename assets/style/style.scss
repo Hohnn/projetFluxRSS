@@ -43,16 +43,16 @@ body {
                 background-color: rgb(206, 203, 44);
             }
         }
-        .orangeTag {
+        .bleuTag {
             &::before {
-                background-color: rgb(206, 82, 44);
+                background-color: rgb(44, 60, 206);
             }
         }
         .red {
             border: $red 1px solid;
         }
-        .orange {
-            border: rgb(206, 82, 44) 1px solid;
+        .bleu {
+            border: rgb(44, 60, 206) 1px solid;
         }
         .yellow {
             border: rgb(206, 203, 44) 1px solid;
@@ -68,6 +68,9 @@ body {
             }
             .mybody {
                 min-height: 200px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
             }
             .link {
                 display: flex;
@@ -86,7 +89,28 @@ body {
             }
             
         }
-        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .miniCard {
+            display: flex;
+            .title {
+                padding: 1rem 0;
+                font-size: 0.8rem;
+            }
+            .tag {
+                text-transform: uppercase;
+            }
+            .card-body {
+                padding-bottom: 0;
+                padding-right: 0;
+            }
+        }
+        .modal-content{
+            background: $bg;
+        }
+
     }
     footer {
         color: white;
@@ -107,4 +131,18 @@ body {
             }
         }
     }
+    .mybtn {
+        text-decoration: none;
+        color: inherit;
+        padding: 0.3rem 1rem;
+        border: white solid 1px;
+        border-radius: 1rem;
+        background-color: unset;
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.164);
+        }
+    }
+    
 }
+
+
