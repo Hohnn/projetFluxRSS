@@ -1,3 +1,7 @@
+<?php
+    include ('./controllers/index-controller.php');
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -103,35 +107,28 @@
     </header>
     <main>
         <div class="container">
-            <div class="row">
+            <div class="row my-4 gy-3">
                 <div class="col">
                     <div class="title">
                         <div class="tag">actus pc</div>
                         <div class="desc text-muted">Toutes l'actualité sur pc</div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
                 <div class="col">
-                    <div class="card mb-3 mycard red">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                            <img src="./assets/img/bf-2042-screenshot-epic-scale.jpg.adapt.crop16x9.818p.jpg" class="img-fluid rounded-start" alt="...">
-                            </div>
-                            <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Date</small></p>
-                                <div class="link">
-                                    <button class="mybtn">Voir plus</button>
-                                    <a href="#" class="mybtn">Article</a>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
+                    <div class="title yellowTag">
+                        <div class="tag">actus pc</div>
+                        <div class="desc text-muted">Toutes l'actualité sur pc</div>
                     </div>
                 </div>
+                <div class="col">
+                    <div class="title orangeTag">
+                        <div class="tag">actus pc</div>
+                        <div class="desc text-muted">Toutes l'actualité sur pc</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <?= loop() ?>
             </div>
         </div>
     </main>
