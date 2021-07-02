@@ -15,45 +15,7 @@
 </head>
 <body>
     <header>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">LOGO</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <div class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <select class="nav-link dropdown-toggle btn btn" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                        <option selected disabled hidden>Veuillez choisir sujet</option>
-                        <option>L'actualité</option>
-                        <option>Les tests</option>
-                        <option>Actus mobile</option>
-                        <option>Actus PC</option>
-                        <option>Les sorties</option>
-                    </select>
-                    <select class="nav-link dropdown-toggle btn btn" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                        <option selected disabled hidden>Veuillez choisir sujet</option>
-                        <option>L'actualité</option>
-                        <option>Les tests</option>
-                        <option>Actus mobile</option>
-                        <option>Actus PC</option>
-                        <option>Les sorties</option>
-                    </select>
-                    <select class="nav-link dropdown-toggle btn btn" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                        <option selected disabled hidden>Veuillez choisir sujet</option>
-                        <option>L'actualité</option>
-                        <option>Les tests</option>
-                        <option>Actus mobile</option>
-                        <option>Actus PC</option>
-                        <option>Les sorties</option>
-                    </select>
-                </div>
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                </div>
-            </div>
-        </div>
-    </nav>
+    <?php include 'navbar.php' ?>
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -109,26 +71,14 @@
         <div class="container">
             <div class="row my-4 gy-3">
                 <div class="col">
-                    <div class="title">
-                        <div class="tag">actus pc</div>
-                        <div class="desc text-muted">Toutes l'actualité sur pc</div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="title yellowTag">
-                        <div class="tag">actus pc</div>
-                        <div class="desc text-muted">Toutes l'actualité sur pc</div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="title bleuTag">
-                        <div class="tag">actus pc</div>
-                        <div class="desc text-muted">Toutes l'actualité sur pc</div>
+                    <div class="title neutreTag">
+                        <div class="tag">Votre séléction</div>
+                        <div class="desc text-muted">Toutes les dernères actualités</div>
                     </div>
                 </div>
             </div>
             <div class="row">
-            <?= displayArticle($fluxActus, $fluxMobile, $fluxMulti) ?>
+            <?= displayArticle($flux1, $flux2, $flux3) ?>
             </div>
         </div>
     </main>

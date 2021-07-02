@@ -12,6 +12,7 @@ $fluxTest = 'https://www.jeuxactu.com/rss/tests.rss';
 $fluxMobile = 'https://www.jeuxactu.com/rss/mobile.rss';
 $fluxMulti = 'https://www.jeuxactu.com/rss/multi.rss';
 
+$allFlux = [$fluxPC, $fluxActus, $fluxTest, $fluxMobile, $fluxMulti];
 
 function displayCard($i, $link, $color){
     $doc = simplexml_load_file($link);
@@ -41,13 +42,17 @@ function displayCard($i, $link, $color){
     <?php
 }
 
-
-function displayArticle($flux1, $flux2, $flux3){
-    for ($i = 1; $i <= 12; $i++) {
-        displayCard($i, $flux1, 'red');
-        displayCard($i, $flux2, 'yellow');
-        displayCard($i, $flux3, 'bleu');
+function displayArticle($flux){
+    for ($i = 1; $i <= 3; $i++) {
+        displayCard($i, $flux, 'red');
     }
+}
+
+if (isset($_GET['choice'])) {
+    $fluxActus = $allFlux[$_GET['choice']];
+    $doc = simplexml_load_file($allFlux[$_GET['choice']]);
+    $title = $doc->channel->title;
+    $subTitle = $doc->channel->description;
 }
 
 ?>

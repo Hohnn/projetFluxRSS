@@ -41,6 +41,10 @@ body main .title .desc {
   white-space: nowrap;
 }
 
+body main .neutreTag::before {
+  background-color: #616161;
+}
+
 body main .yellowTag::before {
   background-color: #cecb2c;
 }
@@ -50,15 +54,15 @@ body main .bleuTag::before {
 }
 
 body main .red {
-  border: #c9353b 1px solid;
+  border: #c9353b 2px solid;
 }
 
 body main .bleu {
-  border: #2c3cce 1px solid;
+  border: #2c3cce 2px solid;
 }
 
 body main .yellow {
-  border: #cecb2c 1px solid;
+  border: #cecb2c 2px solid;
 }
 
 body main .mycard {

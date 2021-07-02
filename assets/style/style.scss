@@ -38,6 +38,11 @@ body {
             }
             
         }
+        .neutreTag{
+            &::before {
+                background-color: rgb(97, 97, 97);
+            }
+        }
         .yellowTag {
             &::before {
                 background-color: rgb(206, 203, 44);
@@ -49,13 +54,13 @@ body {
             }
         }
         .red {
-            border: $red 1px solid;
+            border: $red 2px solid;
         }
         .bleu {
-            border: rgb(44, 60, 206) 1px solid;
+            border: rgb(44, 60, 206) 2px solid;
         }
         .yellow {
-            border: rgb(206, 203, 44) 1px solid;
+            border: rgb(206, 203, 44) 2px solid;
         }
         .mycard {
             background-color: $bg;

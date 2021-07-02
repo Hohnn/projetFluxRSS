@@ -52,6 +52,20 @@ function displayCard($i, $link, $color, $name)
 <?php
 }
 
+$flux1 = $fluxMulti;
+$flux2 = $fluxMobile;
+$flux3 = $fluxTest;
+
+$doc = simplexml_load_file($flux1);
+$title = $doc->channel->title;
+$subTitle = $doc->channel->description;
+
+function category($flux){
+    $doc = simplexml_load_file($flux);
+    $title = $doc->channel->title;
+    return $title;
+}
+
 
 function displayArticle($flux1, $flux2, $flux3)
 {
