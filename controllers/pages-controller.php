@@ -31,8 +31,7 @@ function displayCard($i, $link, $color){
                             <h5 class="card-title"><?= ($title) ?></h5>
                             <p class="card-text"><small class="text-muted">Date</small></p>
                             <div class="link">
-                                <button class="mybtn">Voir plus</button>
-                                <a href="<?= ($source) ?>" class="mybtn">Article</a>
+                                <a href="<?= ($source) ?>" class="mybtn">Aller vers l'article</a>
                             </div>
                         </div>
                     </div>
