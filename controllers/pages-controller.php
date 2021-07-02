@@ -43,7 +43,7 @@ function displayCard($i, $link, $color){
 }
 
 function displayArticle($flux){
-    for ($i = 1; $i <= 3; $i++) {
+    for ($i = 1; $i <= 12; $i++) {
         displayCard($i, $flux, 'red');
     }
 }

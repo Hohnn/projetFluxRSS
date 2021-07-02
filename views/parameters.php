@@ -9,10 +9,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../assets/style/style.css">
+    <link rel="stylesheet" href="./assets/style/light.css">
     <title>Paramètre</title>
 </head>
 
-<body class="parameters">
+<body class="parameters light">
     <header>
     <?php include '../navbar.php' ?>
 
@@ -26,7 +27,7 @@
                         </p>
                     </div>
                     <p>Veuillez choisir la quantité image afficher</p>
-                    <select name="number_aricle" class="nav-link dropdown-toggle btn btn" href="#" role="button" id="display" data-bs-toggle="dropdown" aria-expanded="false">
+                    <select name="number_article" class="nav-link dropdown-toggle btn btn" href="#" role="button" id="display" data-bs-toggle="dropdown" aria-expanded="false">
                         <option value="6">6</option>
                         <option value="9">9</option>
                         <option value="12">12</option>
@@ -44,6 +45,7 @@
                         <label for="option4">Actus PC</label><br>
                         <input class="case" onclick="doAction()" type="checkbox" id="option5" name="option_list[]" value="4" <?= isset($_COOKIE['myChoices']) ? (preg_match('/(4)/', $_COOKIE['myChoices']) ? 'checked' : '') : ''  ?>>
                         <label for="option5">Les sorties</label><br>
+                        <p class="text-danger"><?= $error ?? '' ?></p>
                         <button type="submit" class="btn btn-secondary">Valider</button>
                     </div>
             </form>

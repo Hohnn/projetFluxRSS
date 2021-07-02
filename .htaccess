@@ -1,8 +1,8 @@
 RewriteEngine On
 RewriteRule ^accueil.html$ /index.php
-RewriteRule ^actus-pc.html$ /views/pages.php?choice=0
-RewriteRule ^actus.html$ /views/pages.php?choice=1
-RewriteRule ^tests.html$ /views/pages.php?choice=2
-RewriteRule ^mobile.html$ /views/pages.php?choice=3
-RewriteRule ^multi.html$ /views/pages.php?choice=4
+RewriteRule ^PC.html$ /views/pages.php?choice=0
+RewriteRule ^Actus.html$ /views/pages.php?choice=1
+RewriteRule ^Tests.html$ /views/pages.php?choice=2
+RewriteRule ^Mobile.html$ /views/pages.php?choice=3
+RewriteRule ^Multi.html$ /views/pages.php?choice=4
 RewriteRule ^settings.html$ /views/parameters.php

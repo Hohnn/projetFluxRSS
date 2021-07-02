@@ -31,26 +31,6 @@ $format = strftime('%d/%m', strtotime($date3));
 $formatHeure = strftime('%H:%M', strtotime($date3));
  ?>
 
-<!-- Modal -->
-<div class="modal fade" id="<?= $name ?>" tabindex="-1" aria-hidden="true">
-     <div class="modal-dialog">
-         <div class="modal-content">
-         <div class="modal-header flex-column">
-             <small><?= $format ?></small>
-             <h5 class="modal-title text-center"><?= $title ?></h5>
-         </div>
-         <div class="modal-body">
-         <img src="<?= ($imgUrl)  ?>" class="img-fluid rounded-start" alt="...">
-         <p><?= $desc ?></p>
-         </div>
-         <div class="modal-footer d-flex">
-             <a href="<?= $source ?>" class="mybtn me-auto">Voir l'article</a>
-             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-         </div>
-         </div>
-     </div>
- </div>
-
 
 
 
@@ -120,7 +100,7 @@ function category($flux){
 
 function displayArticle($flux1, $flux2, $flux3)
 {
-    for ($i = 0; $i <= 12; $i++) {
+    for ($i = 0; $i <= ($_COOKIE['numberArticle'] ?? 6); $i++) {
         displayCard($i, $flux1, '', 'flux1');
         displayCard($i, $flux2, 'yellowTag', 'flux2');
         displayCard($i, $flux3, 'bleuTag', 'flux3');
@@ -128,5 +108,3 @@ function displayArticle($flux1, $flux2, $flux3)
 }
 
 ?>
-
- 
