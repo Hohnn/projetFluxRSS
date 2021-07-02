@@ -62,36 +62,34 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-            <img src="./assets/img/bf-2042-screenshot-dive.jpg.adapt.crop16x9.818p.jpg" class="d-block w-100" alt="...">
+            
+            <img src="<?= $imgUrlCar ?>" class="d-block w-100" alt="..." data-bs-toggle="modal" data-bs-target="#flux10">
             <div class="carousel-caption d-none d-md-block myCarousel">
                 <div class="top">
                     <div class="tag">ACTUS PC</div>
-                    <div class="date">31 octobre 2019</div>
+                    <div class="date"><?=  $date ?></div>
                 </div>
-                <h5>Titre de l'article</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, repellendus est sed soluta magnam minus. Repudiandae voluptates doloribus nisi voluptas fuga itaque deleniti. Debitis dicta dolores, perspiciatis in quidem eaque suscipit deserunt iusto vitae nobis iure totam repellendus esse praesentium ipsam provident amet dolore rem! Possimus laborum non voluptatibus consequuntur.</p>
+                <h5><?= $titleCar ?></h5>
             </div>
             </div>
             <div class="carousel-item">
-            <img src="./assets/img/bf-2042-screenshot-dive.jpg.adapt.crop16x9.818p.jpg" class="d-block w-100" alt="...">
+            <img src="<?= $imgUrlCar2 ?>" class="d-block w-100" alt="..." data-bs-toggle="modal" data-bs-target="#flux20">
             <div class="carousel-caption d-none d-md-block myCarousel">
                 <div class="top">
                     <div class="tag">ACTUS PC</div>
-                    <div class="date">31 octobre 2019</div>
+                    <div class="date"><?=  $date2 ?></div>
                 </div>
-                <h5>Titre de l'article</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, repellendus est sed soluta magnam minus. Repudiandae voluptates doloribus nisi voluptas fuga itaque deleniti. Debitis dicta dolores, perspiciatis in quidem eaque suscipit deserunt iusto vitae nobis iure totam repellendus esse praesentium ipsam provident amet dolore rem! Possimus laborum non voluptatibus consequuntur.</p>
+                <h5><?= $titleCar2 ?></h5>
             </div>
             </div>
             <div class="carousel-item">
-            <img src="./assets/img/bf-2042-screenshot-dive.jpg.adapt.crop16x9.818p.jpg" class="d-block w-100" alt="...">
+            <img src="<?= $imgUrlCar3 ?>" class="d-block w-100" alt="..." data-bs-toggle="modal" data-bs-target="#flux30">
             <div class="carousel-caption d-none d-md-block myCarousel">
                 <div class="top">
                     <div class="tag">ACTUS PC</div>
-                    <div class="date">31 octobre 2019</div>
+                    <div class="date"><?=  $date3 ?></div>
                 </div>
-                <h5>Titre de l'article</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, repellendus est sed soluta magnam minus. Repudiandae voluptates doloribus nisi voluptas fuga itaque deleniti. Debitis dicta dolores, perspiciatis in quidem eaque suscipit deserunt iusto vitae nobis iure totam repellendus esse praesentium ipsam provident amet dolore rem! Possimus laborum non voluptatibus consequuntur.</p>
+                <h5><?= $titleCar3 ?></h5>
             </div>
             </div>
         </div>
