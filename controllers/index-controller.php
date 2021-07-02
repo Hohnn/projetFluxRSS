@@ -9,6 +9,53 @@ setlocale(LC_TIME, "fr_FR", "fra");
 
 
 
+$docCar = simplexml_load_file($fluxActus);
+$imgUrlCar = $docCar->channel->item[0]->enclosure["url"];
+$titleCar = $docCar->channel->item[0]->title;
+$date = $docCar->channel->item[0]->children('dc', true)->date;
+$format = strftime('%d/%m', strtotime($date));
+$formatHeure = strftime('%H:%M', strtotime($date));
+
+$docCar2 = simplexml_load_file($fluxMobile);
+$imgUrlCar2 = $docCar2->channel->item[0]->enclosure["url"];
+$titleCar2 = $docCar2->channel->item[0]->title;
+$date2 = $docCar2->channel->item[0]->children('dc', true)->date;
+$format = strftime('%d/%m', strtotime($date2));
+$formatHeure = strftime('%H:%M', strtotime($date2));
+
+$docCar3 = simplexml_load_file($fluxMulti);
+$imgUrlCar3 = $docCar3->channel->item[0]->enclosure["url"];
+$titleCar3 = $docCar3->channel->item[0]->title;
+$date3 = $docCar3->channel->item[0]->children('dc', true)->date;
+$format = strftime('%d/%m', strtotime($date3));
+$formatHeure = strftime('%H:%M', strtotime($date3));
+ ?>
+
+<!-- Modal -->
+<div class="modal fade" id="<?= $name ?>" tabindex="-1" aria-hidden="true">
+     <div class="modal-dialog">
+         <div class="modal-content">
+         <div class="modal-header flex-column">
+             <small><?= $format ?></small>
+             <h5 class="modal-title text-center"><?= $title ?></h5>
+         </div>
+         <div class="modal-body">
+         <img src="<?= ($imgUrl)  ?>" class="img-fluid rounded-start" alt="...">
+         <p><?= $desc ?></p>
+         </div>
+         <div class="modal-footer d-flex">
+             <a href="<?= $source ?>" class="mybtn me-auto">Voir l'article</a>
+             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+         </div>
+         </div>
+     </div>
+ </div>
+
+
+
+
+
+<?php
 function displayCard($i, $link, $color, $name)
 {
     $doc = simplexml_load_file($link);
@@ -18,7 +65,8 @@ function displayCard($i, $link, $color, $name)
     $source = $doc->channel->item[$i]->link;
     $date = $doc->channel->item[$i]->children('dc', true)->date;
     $format = strftime('%d/%m', strtotime($date));
-    $formatHeure = strftime('%H:%M', strtotime($date)); ?>
+    $formatHeure = strftime('%H:%M', strtotime($date)); 
+?>
 
     <a class="col-12" data-bs-toggle="modal" data-bs-target="#<?= $name . $i ?>">
         <div class="miniCard">
@@ -49,7 +97,9 @@ function displayCard($i, $link, $color, $name)
             </div>
         </div>
     </div>
+    
 <?php
+
 }
 
 $flux1 = $fluxMulti;
@@ -67,6 +117,7 @@ function category($flux){
 }
 
 
+
 function displayArticle($flux1, $flux2, $flux3)
 {
     for ($i = 0; $i <= 12; $i++) {
@@ -77,3 +128,5 @@ function displayArticle($flux1, $flux2, $flux3)
 }
 
 ?>
+
+ 
