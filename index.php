@@ -11,9 +11,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./assets/style/style.css">
+    <link rel="stylesheet" href="./assets/style/light.css">
     <title>Jeux Vidéo</title>
 </head>
-<body>
+<body class="light">
     <header>
     <?php include 'navbar.php' ?>
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -70,7 +71,7 @@
             <div class="row my-4 gy-3">
                 <div class="col">
                     <div class="title neutreTag">
-                        <div class="tag">Votre séléction</div>
+                        <div class="tag">Les news</div>
                         <div class="desc text-muted">Toutes les dernères actualités</div>
                     </div>
                 </div>

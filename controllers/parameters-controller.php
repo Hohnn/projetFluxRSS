@@ -1,15 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel ="stylesheet" href ="../assets/style/parameters.css">
-    <title>Paramètres </title>
-</head>
-<body>
-   <div class="container">
-   <h1>Bonjour vous selectionner les catégories ainsi que le nombre d'articles que vous souhaitez parcourir> </h1>
-   </div>  
-</body>
-</html>
+<?php 
+$subjects =
+[
+    'Actus',
+    'Tests',
+    'Mobile',
+    'PC',
+    'Sorties'
+];
+
+$choice1 = 0;
+$choice2 = 2;
+$choice3 = 4;
+
+//prise en compte des choix en fonction des cookies//
+
+/* if (isset($_COOKIE['myChoices'])) {
+    $choice1 = $subjects[$_COOKIE['choice1']];
+    $choice2 = $_COOKIE['choice2'];
+    $choice3 = $_COOKIE['choice3'];
+} */
+
+//creation des cookies dans le formulaire parametres//
+
+if (isset($_POST['option_list'])) {
+/* $myChoices = $_POST['option_list'][0] . $_POST['option_list'][1] . $_POST['option_list'][2];
+setcookie('myChoices', $myChoices); */
+setcookie('choice1', $subjects[$_POST['option_list'][0]]);
+setcookie('choice2', $subjects[$_POST['option_list'][1]]);
+setcookie('choice3', $subjects[$_POST['option_list'][2]]);
+header('Location: index.php');
+}
+
+if(!empty($_POST['option_list'][0]) && $_POST['option_list'][1] && $_POST['option_list'][2]){
+    $error = "Veuillez choisir au moins 3 categories";
+}
+
+
+if (isset($_POST['number_aricle'])) {
+    $numberArticles = $_POST['number_aricle'];
+    setcookie('numberaricle', $_POST['number_aricle'], time() + 86400);
+    header('Location: index.php');
+
+    var_dump("ok");
+
+
+    if ($_POST['option_list'] == "veuillez choisir vos actualitées") {
+        var_dump("ok2");
+        $message2 = "Veuillez choisir 3 catégories";
+        header('Location: parameters-controller.php');
+    }
+}
+?>

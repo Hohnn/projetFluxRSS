@@ -1,0 +1,36 @@
+* {
+  color: black;
+}
+
+.light {
+  background-color: #dfdfdf;
+}
+
+.light nav {
+  background-color: white !important;
+}
+
+.light nav ul li a {
+  color: black !important;
+}
+
+.light .mycard {
+  background-color: #dfdfdf;
+}
+
+.light .mycard .mybtn {
+  border-color: black !important;
+}
+
+.light .category {
+  color: white;
+}
+
+.light .category li {
+  color: white;
+}
+
+.light .category li i {
+  color: white;
+}
+/*# sourceMappingURL=light.css.map */

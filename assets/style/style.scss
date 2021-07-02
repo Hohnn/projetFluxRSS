@@ -1,13 +1,24 @@
 $red: #c9353b;
 $bg: #191b1c;
+$bleu: #004777;
+$yellow: #ff7700;
+
 
 body {
     background-color: $bg;
+    color: white;
     header {
         nav {
-            background-color: rgba(0, 0, 0, 0.493) !important;
+            background-color: rgb(10, 10, 10) !important;
             z-index: 100;
-
+            border-radius: 10px 10px 0 0 !important;
+        }
+        .carousel-indicators {
+            button {
+                width: 5px !important;
+                height: 5px !important;
+                border-radius: 50% !important;
+            }
         }
         .myCarousel {
             text-align: start !important;
@@ -40,27 +51,27 @@ body {
         }
         .neutreTag{
             &::before {
-                background-color: rgb(97, 97, 97);
+                background-color: #5e807f;
             }
         }
         .yellowTag {
             &::before {
-                background-color: rgb(206, 203, 44);
+                background-color: $yellow;
             }
         }
         .bleuTag {
             &::before {
-                background-color: rgb(44, 60, 206);
+                background-color: $bleu;
             }
         }
         .red {
             border: $red 2px solid;
         }
         .bleu {
-            border: rgb(44, 60, 206) 2px solid;
+            border: $bleu 2px solid;
         }
         .yellow {
-            border: rgb(206, 203, 44) 2px solid;
+            border: $yellow 2px solid;
         }
         .mycard {
             background-color: $bg;
@@ -120,6 +131,8 @@ body {
     footer {
         color: white;
         background-color: #181c18;
+        padding-bottom: 70px;
+        margin-top: 1rem;
         .category {
             font-size: 1.3rem;
             text-transform: uppercase;
@@ -148,6 +161,23 @@ body {
         }
     }
     
+    
 }
+
+.parameters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    .container {
+        max-width: 500px;
+        color: aliceblue;
+        border: solid 3px white ;
+        padding: 1rem;
+        background-color: unset
+    }
+}
+
 
 
