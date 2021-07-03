@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700&display=swap');
+
 $red: #c9353b;
 $bg: #191b1c;
 $bleu: #004777;
@@ -8,19 +10,24 @@ body {
     background-color: $bg;
     color: white;
     padding-bottom: 50px;
+    font-family: 'Mulish', sans-serif;
     header {
         nav {
             background-color: rgb(10, 10, 10) !important;
             z-index: 100;
             border-radius: 10px 10px 0 0 !important;
+            box-shadow: 0 0px 10px rgba(0, 0, 0, 0.575);
         }
         .myCarouselCaption {
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
-            padding-left: 1rem;
-            padding-right: 1rem;
-            text-shadow: 1px 1px 3px black;
+            padding: 5px 10px;
+            margin-bottom: 1rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.671);
+            font-weight: bold;
+            font-size: 1.2rem;
+            backdrop-filter: blur( 3px );
         }
         .carousel-indicators {
             button {
@@ -31,6 +38,25 @@ body {
         }
         .myCarousel {
             text-align: start !important;
+            text-shadow: 1px 1px 2px black;
+        }
+        .myArrow {
+            background-size: 50%;
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backdrop-filter: blur( 3px );
+                background-color: rgba(0, 0, 0, 0.185);
+                opacity: inherit;
+                top: 0;
+                left: 0;
+                border-radius: 50%;
+                z-index: -1;
+
+            }
         }
     }
     main {
@@ -195,12 +221,16 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    .container {
+    .cardPara {
+        width: 90%;
         max-width: 500px;
-        color: aliceblue;
-        border: solid 3px white ;
-        padding: 1rem;
-        background-color: unset
+        color: white;
+        padding: 1.3rem;
+        background: rgba( 23, 23, 23, 0.25 );
+        box-shadow: 0 8px 32px 0 rgba(135, 31, 31, 0.37);
+        backdrop-filter: blur( 4px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
     }
 }
 

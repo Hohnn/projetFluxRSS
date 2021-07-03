@@ -1,22 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700&display=swap");
 body {
   background-color: #191b1c;
   color: white;
   padding-bottom: 50px;
+  font-family: 'Mulish', sans-serif;
 }
 
 body header nav {
   background-color: #0a0a0a !important;
   z-index: 100;
   border-radius: 10px 10px 0 0 !important;
+  -webkit-box-shadow: 0 0px 10px rgba(0, 0, 0, 0.575);
+          box-shadow: 0 0px 10px rgba(0, 0, 0, 0.575);
 }
 
 body header .myCarouselCaption {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  text-shadow: 1px 1px 3px black;
+  padding: 5px 10px;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.671);
+  font-weight: bold;
+  font-size: 1.2rem;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
 }
 
 body header .carousel-indicators button {
@@ -27,6 +35,27 @@ body header .carousel-indicators button {
 
 body header .myCarousel {
   text-align: start !important;
+  text-shadow: 1px 1px 2px black;
+}
+
+body header .myArrow {
+  background-size: 50%;
+  position: relative;
+}
+
+body header .myArrow::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  background-color: rgba(0, 0, 0, 0.185);
+  opacity: inherit;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  z-index: -1;
 }
 
 body main {
@@ -235,11 +264,17 @@ body .mybtn:hover {
   min-height: 100vh;
 }
 
-.parameters .container {
+.parameters .cardPara {
+  width: 90%;
   max-width: 500px;
-  color: aliceblue;
-  border: solid 3px white;
-  padding: 1rem;
-  background-color: unset;
+  color: white;
+  padding: 1.3rem;
+  background: rgba(23, 23, 23, 0.25);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(135, 31, 31, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(135, 31, 31, 0.37);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 /*# sourceMappingURL=style.css.map */

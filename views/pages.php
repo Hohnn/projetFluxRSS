@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./assets/style/light.css">
     <title>Jeux Vidéo</title>
 </head>
-<body class="">
+<body class="<?= $themeClass ?>">
     <header>
     <?php include '../navbar.php' ?>
     </header>

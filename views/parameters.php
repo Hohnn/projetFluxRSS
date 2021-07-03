@@ -13,28 +13,29 @@
     <title>Paramètre</title>
 </head>
 
-<body class="parameters">
+<body class="parameters <?= $themeClass ?>">
     <header>
     <?php include '../navbar.php' ?>
 
     </header>
-    <h1>Bonjour selectionner les catégories ainsi que le nombre d'articles que vous souhaitez parcourir </h1>
-    <div class="card container">
+    <h1>Paramètre </h1>
+    <div class="cardPara">
             <form action="" method="post">
                     <div class="form-check form-switch">
-                        <p class="form-check-label" for="flexSwitchCheckDefault">Dark mode
-                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" onclick="myFunction()">
+                        <p class="form-check-label" for="flexSwitchCheckDefault">Mode jour
+                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" onclick="myFunction()" <?= $check ?>>
                         </p>
                     </div>
-                    <p>Veuillez choisir la quantité image afficher</p>
-                    <select name="number_article" class="nav-link dropdown-toggle btn btn" href="#" role="button" id="display" data-bs-toggle="dropdown" aria-expanded="false">
+                    <p>Veuillez choisir la quantité de news</p>
+                    <select name="number_article" class="form-select form-select-sm w-50">
+                        <option selected disabled hidden><?= $_COOKIE['numberArticle'] ?? '6' ?></option>
                         <option value="6">6</option>
                         <option value="9">9</option>
                         <option value="12">12</option>
                     </select>
-                    <div class="d-inline">
+                    <div class="mt-4">
 
-                        <label>veuillez choisir vos actualitées</label><br>
+                        <div class="mb-2">Veuillez choisir vos actualitées</div>
                         <input class="case" onclick="doAction()" type="checkbox" id="option1" name="option_list[]" value="0" <?= isset($_COOKIE['myChoices']) ? (preg_match('/(0)/', $_COOKIE['myChoices']) ? 'checked' : '') : '' ?>>
                         <label for="option1">Actualité</label><br>
                         <input class="case" onclick="doAction()" type="checkbox" id="option2" name="option_list[]" value="1" <?= isset($_COOKIE['myChoices']) ? (preg_match('/(1)/', $_COOKIE['myChoices']) ? 'checked' : '') : '' ?>>
@@ -56,6 +57,11 @@
 function myFunction() {
     var element = document.body;
     element.classList.toggle("light");
+    let theme = "dark"
+    if (element.classList.contains("light")) {
+        theme = "light"
+    }
+    document.cookie = "theme=" + theme;
 }
 </script>
 </body>

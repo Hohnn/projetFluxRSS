@@ -54,4 +54,11 @@ if (isset($_POST['number_article'])) {
         header('Location: parameters-controller.php');
     } */
 }
+
+$themeClass = '';
+$check = '';
+if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'light') {
+  $themeClass = 'light';
+  $check = 'checked';
+}
 ?>

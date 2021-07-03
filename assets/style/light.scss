@@ -6,9 +6,23 @@
     * {
         color: black;
     }
-    background-color: rgb(223, 223, 223);
+    background-color: #f7f7f2;
+    .modal {
+        button {
+            color: white;
+        }
+    }
+    .mybtn {
+        border-color: rgb(46, 46, 46);
+    }
+    .myCarouselCaption {
+        color: white;
+    }
+    .myCarousel * {
+        color: white;
+    }
     .modal-content {
-        background-color: rgb(223, 223, 223);
+        background-color: #f7f7f2;
     }
     nav {
         background-color: white !important;

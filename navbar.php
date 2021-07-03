@@ -13,7 +13,7 @@
     <div class="container-fluid">
         <a class="navbar-brand" href="accueil.html"><i class="bi bi-house"></i></a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto mb-lg-0">
+            <ul class="navbar-nav w-100 justify-content-around mb-lg-0 text-uppercase">
                 <li class="nav-item">
                     <a class="nav-link" href="<?= isset($_COOKIE['choice1']) ? $subjects[$_COOKIE['choice1']] : 'Actus'  ?>.html"><?= $subjects[$_COOKIE['choice1'] ?? 0] ?></a>
                 </li>
@@ -23,8 +23,10 @@
                 <li class="nav-item">
                     <a class="nav-link" href="<?= isset($_COOKIE['choice3']) ? $subjects[$_COOKIE['choice3']] : 'Mobiles'  ?>.html" ><?= $subjects[$_COOKIE['choice3'] ?? 2]  ?></a>
                 </li>
+                <li>
+                    <a class="nav-link" href="settings.html"><i class="bi bi-gear"></i></a>
+                </li>
             </ul>
-            <a class="navbar-brand me-0" href="settings.html"><i class="bi bi-gear"></i></a>
         </div>
     </div>
 </nav>

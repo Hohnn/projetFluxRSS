@@ -66,4 +66,9 @@ if (isset($_GET['choice'])) {
     $subTitle = $doc->channel->description;
 }
 
+
+$themeClass = '';
+if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'light') {
+  $themeClass = 'light';
+}
 ?>

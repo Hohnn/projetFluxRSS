@@ -1,13 +1,29 @@
 .light {
-  background-color: #dfdfdf;
+  background-color: #f7f7f2;
 }
 
 .light * {
   color: black;
 }
 
+.light .modal button {
+  color: white;
+}
+
+.light .mybtn {
+  border-color: #2e2e2e;
+}
+
+.light .myCarouselCaption {
+  color: white;
+}
+
+.light .myCarousel * {
+  color: white;
+}
+
 .light .modal-content {
-  background-color: #dfdfdf;
+  background-color: #f7f7f2;
 }
 
 .light nav {

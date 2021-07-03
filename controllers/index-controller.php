@@ -34,7 +34,10 @@ $formatHeure = strftime('%H:%M', strtotime($date3));
 
 
 <?php
-function displayCard($i, $link, $color, $name)
+
+
+
+function displayCard($i, $link, $color, $name, $tag)
 {
     $doc = simplexml_load_file($link);
     $imgUrl = $doc->channel->item[$i]->enclosure["url"];
@@ -50,27 +53,28 @@ function displayCard($i, $link, $color, $name)
         <div class="miniCard">
             <div class="title <?= $color ?>"><?= $formatHeure ?> <br> <?= $format ?></div>
             <div class="card-body">
-                <div class="tag">Actus PC</div>
-                <div class="titre"><?= $title ?></div>
+                <div class="tag text-primary"><?= $tag ?></div>
+                <div class="titre "><?= $title ?></div>
             </div>
         </div>
     </a>
 
     <!-- Modal -->
     <div class="modal fade" id="<?= $name . $i ?>" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-            <div class="modal-header flex-column">
-                <small class="mb-2"><?= $format ?></small>
+            <div class="modal-header flex-column border-0">
                 <h5 class="modal-title text-center"><?= $title ?></h5>
             </div>
+            <img src="<?= ($imgUrl)  ?>" class="img-fluid" alt="...">
+
             <div class="modal-body">
-            <img src="<?= ($imgUrl)  ?>" class="img-fluid rounded-start" alt="...">
-            <p class="mt-3 mb-0"><?= $desc ?></p>
+                <p class="mt-2 mb-0"><?= $desc ?></p>
+                <small class="pt-2 text-muted"><?= $formatHeure ?> <?= $format ?></small>
             </div>
-            <div class="modal-footer d-flex">
+            <div class="modal-footer d-flex border-0">
                 <a href="<?= $source ?>" class="mybtn me-auto">Voir l'article</a>
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
             </div>
             </div>
         </div>
@@ -98,11 +102,29 @@ function category($flux){
 
 function displayArticle($flux1, $flux2, $flux3)
 {
-    for ($i = 0; $i <= ($_COOKIE['numberArticle'] ?? 6); $i++) {
-        displayCard($i, $flux1, '', 'flux1');
-        displayCard($i, $flux2, 'yellowTag', 'flux2');
-        displayCard($i, $flux3, 'bleuTag', 'flux3');
+    $subjects =
+    [
+        'Actus',
+        'Tests',
+        'Mobile',
+        'PC',
+        'Multi'
+    ];
+
+    $tag1 = $subjects[$_COOKIE['choice1'] ?? 0];
+    $tag2 = $subjects[$_COOKIE['choice2'] ?? 1];
+    $tag3 = $subjects[$_COOKIE['choice3'] ?? 2];
+
+    for ($i = 0; $i < ($_COOKIE['numberArticle'] ?? 6)/3; $i++) {
+        displayCard($i, $flux1, '', 'flux1', $tag1);
+        displayCard($i, $flux2, 'yellowTag', 'flux2', $tag2);
+        displayCard($i, $flux3, 'bleuTag', 'flux3', $tag3);
     }
+}
+
+$themeClass = '';
+if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'light') {
+  $themeClass = 'light';
 }
 
 ?>
