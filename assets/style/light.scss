@@ -1,11 +1,15 @@
 
 
-* {
-    color: black;
-}
+
 
 .light {
+    * {
+        color: black;
+    }
     background-color: rgb(223, 223, 223);
+    .modal-content {
+        background-color: rgb(223, 223, 223);
+    }
     nav {
         background-color: white !important;
         ul {

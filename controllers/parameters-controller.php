@@ -44,7 +44,7 @@ if (isset($_POST['number_article'])) {
     setcookie('numberArticle', $_POST['number_article'], time() + 86400);
     /* header('Location: index.php'); */
     if (!isset($_POST['option_list'])) {
-    $error = "Veuillez choisir 3 categories";
+        $error = "Veuillez choisir 3 categories";
         
     }
 

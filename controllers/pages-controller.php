@@ -14,7 +14,6 @@ $fluxMulti = 'https://www.jeuxactu.com/rss/multi.rss';
 
 $allFlux = [$fluxPC, $fluxActus, $fluxTest, $fluxMobile, $fluxMulti];
 
-
 function displayCard($i, $link, $color)
 {
     $doc = simplexml_load_file($link);
@@ -48,9 +47,14 @@ function displayCard($i, $link, $color)
 <?php
 }
 
+
+
 function displayArticle($flux)
 {
-    for ($i = 1; $i <= 12; $i++) {
+    $docCar = simplexml_load_file($flux);
+    $i = -1;
+    foreach ($docCar->channel->item as $items) {
+        $i++;
         displayCard($i, $flux, 'red');
     }
 }
