@@ -29,9 +29,7 @@ $titleCar3 = $docCar3->channel->item[0]->title;
 $date3 = $docCar3->channel->item[0]->children('dc', true)->date;
 $format = strftime('%d/%m', strtotime($date3));
 $formatHeure = strftime('%H:%M', strtotime($date3));
- ?>
-
-
+?>
 
 
 
@@ -63,12 +61,12 @@ function displayCard($i, $link, $color, $name)
         <div class="modal-dialog">
             <div class="modal-content">
             <div class="modal-header flex-column">
-                <small><?= $format ?></small>
+                <small class="mb-2"><?= $format ?></small>
                 <h5 class="modal-title text-center"><?= $title ?></h5>
             </div>
             <div class="modal-body">
             <img src="<?= ($imgUrl)  ?>" class="img-fluid rounded-start" alt="...">
-            <p><?= $desc ?></p>
+            <p class="mt-3 mb-0"><?= $desc ?></p>
             </div>
             <div class="modal-footer d-flex">
                 <a href="<?= $source ?>" class="mybtn me-auto">Voir l'article</a>

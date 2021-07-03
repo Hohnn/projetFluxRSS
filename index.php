@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./assets/style/light.css">
     <title>Jeux Vidéo</title>
 </head>
-<body class="light">
+<body class="">
     <header>
     <?php include 'navbar.php' ?>
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -25,35 +25,37 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-            
-            <img src="<?= $imgUrlCar ?>" class="d-block w-100" alt="..." data-bs-toggle="modal" data-bs-target="#flux10">
-            <div class="carousel-caption d-none d-md-block myCarousel">
-                <div class="top">
-                    <div class="tag">ACTUS PC</div>
-                    <div class="date"><?=  $date ?></div>
+                <img src="<?= $imgUrlCar ?>" class="d-block w-100" alt="..." data-bs-toggle="modal" data-bs-target="#flux10">
+                <p class="carousel-caption myCarouselCaption"><?= $titleCar ?></p>
+                <div class="carousel-caption d-none d-md-block myCarousel">
+                    <div class="top">
+                        <div class="tag">ACTUS PC</div>
+                        <div class="date"><?=  $date ?></div>
+                    </div>
+                    <h5><?= $titleCar ?></h5>
                 </div>
-                <h5><?= $titleCar ?></h5>
-            </div>
             </div>
             <div class="carousel-item">
-            <img src="<?= $imgUrlCar2 ?>" class="d-block w-100" alt="..." data-bs-toggle="modal" data-bs-target="#flux20">
-            <div class="carousel-caption d-none d-md-block myCarousel">
-                <div class="top">
-                    <div class="tag">ACTUS PC</div>
-                    <div class="date"><?=  $date2 ?></div>
+                <img src="<?= $imgUrlCar2 ?>" class="d-block w-100" alt="..." data-bs-toggle="modal" data-bs-target="#flux20">
+                <div class="carousel-caption myCarouselCaption"><?= $titleCar2 ?></div>
+                <div class="carousel-caption d-none d-md-block myCarousel">
+                    <div class="top">
+                        <div class="tag">ACTUS PC</div>
+                        <div class="date"><?=  $date2 ?></div>
+                    </div>
+                    <h5><?= $titleCar2 ?></h5>
                 </div>
-                <h5><?= $titleCar2 ?></h5>
-            </div>
             </div>
             <div class="carousel-item">
-            <img src="<?= $imgUrlCar3 ?>" class="d-block w-100" alt="..." data-bs-toggle="modal" data-bs-target="#flux30">
-            <div class="carousel-caption d-none d-md-block myCarousel">
-                <div class="top">
-                    <div class="tag">ACTUS PC</div>
-                    <div class="date"><?=  $date3 ?></div>
+                <img src="<?= $imgUrlCar3 ?>" class="d-block w-100" alt="..." data-bs-toggle="modal" data-bs-target="#flux30">
+                <div class="carousel-caption myCarouselCaption"><?= $titleCar3 ?></div>
+                <div class="carousel-caption d-none d-md-block myCarousel">
+                    <div class="top">
+                        <div class="tag">ACTUS PC</div>
+                        <div class="date"><?=  $date3 ?></div>
+                    </div>
+                    <h5><?= $titleCar3 ?></h5>
                 </div>
-                <h5><?= $titleCar3 ?></h5>
-            </div>
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
@@ -124,6 +126,7 @@
         </div>
 
     </footer>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

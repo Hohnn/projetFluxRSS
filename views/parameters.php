@@ -13,7 +13,7 @@
     <title>Paramètre</title>
 </head>
 
-<body class="parameters light">
+<body class="parameters">
     <header>
     <?php include '../navbar.php' ?>
 
@@ -23,7 +23,7 @@
             <form action="" method="post">
                     <div class="form-check form-switch">
                         <p class="form-check-label" for="flexSwitchCheckDefault">Dark mode
-                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" onclick="myFunction()">
                         </p>
                     </div>
                     <p>Veuillez choisir la quantité image afficher</p>
@@ -52,7 +52,12 @@
     </div>
     </div>
 
-
+    <script>
+function myFunction() {
+    var element = document.body;
+    element.classList.toggle("light");
+}
+</script>
 </body>
 
 </html>

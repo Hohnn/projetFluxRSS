@@ -14,36 +14,47 @@ $fluxMulti = 'https://www.jeuxactu.com/rss/multi.rss';
 
 $allFlux = [$fluxPC, $fluxActus, $fluxTest, $fluxMobile, $fluxMulti];
 
-function displayCard($i, $link, $color){
+function displayCard($i, $link, $color)
+{
     $doc = simplexml_load_file($link);
     $imgUrl = $doc->channel->item[$i]->enclosure["url"];
     $title = $doc->channel->item[$i]->title;
     $desc = $doc->channel->item[$i]->description;
     $source = $doc->channel->item[$i]->link; ?>
-        <div class="col-lg-6">
-            <div class="card mb-3 mycard <?= $color ?>">
-                <div class="row g-0">
-                    <div class="col-md-5">
-                        <img src="<?= ($imgUrl)  ?>" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-7">
-                        <div class="card-body mybody">
-                            <h5 class="card-title"><?= ($title) ?></h5>
-                            <p class="card-text"><small class="text-muted">Date</small></p>
-                            <div class="link">
-                                <button class="mybtn">Voir plus</button>
-                                <a href="<?= ($source) ?>" class="mybtn">Article</a>
-                            </div>
+    <div class="col-lg-6">
+        <div class="card mb-3 mycard <?= $color ?>">
+            <div class="row g-0">
+                <div class="col-md-5">
+                    <img src="<?= ($imgUrl)  ?>" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-7">
+                    <div class="card-body mybody">
+                        <h5 class="card-title"><?= ($title) ?></h5>
+                        <p class="card-text"><small class="text-muted">Date</small></p>
+                        <div class="link">
+                            <button class="mybtn">Voir plus</button>
+                            <a href="<?= ($source) ?>" class="mybtn">Article</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    <?php
+    </div>
+<?php
 }
 
-function displayArticle($flux){
+/* function displayArticle($flux){
     for ($i = 1; $i <= 12; $i++) {
+        displayCard($i, $flux, 'red');
+    }
+} */
+
+function displayArticle($flux)
+{
+    $docCar = simplexml_load_file($flux);
+    $i = -1;
+    foreach ($docCar->channel->item as $items) {
+        $i++;
         displayCard($i, $flux, 'red');
     }
 }

@@ -1,8 +1,12 @@
-* {
+.light {
+  background-color: #dfdfdf;
+}
+
+.light * {
   color: black;
 }
 
-.light {
+.light .modal-content {
   background-color: #dfdfdf;
 }
 

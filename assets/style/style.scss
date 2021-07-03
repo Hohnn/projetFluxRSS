@@ -13,6 +13,14 @@ body {
             z-index: 100;
             border-radius: 10px 10px 0 0 !important;
         }
+        .myCarouselCaption {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            text-shadow: 1px 1px 3px black;
+        }
         .carousel-indicators {
             button {
                 width: 5px !important;
@@ -178,6 +186,4 @@ body {
         background-color: unset
     }
 }
-
-
 
