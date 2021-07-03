@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./assets/style/style.css">
     <link rel="stylesheet" href="./assets/style/light.css">
-    <title>Jeux Vidéo</title>
+    <title>Vidéo Game News</title>
 </head>
 <body class="light">
     <header>
@@ -86,8 +86,10 @@
             <div class="row">
                 <div class="col">
                     <div class="category">
-                        Plateforme
-                        <ul>
+                        <div class="title">Plateformes
+                            <div class="plus d-md-none">+</div>
+                        </div>
+                        <ul class="d-none d-md-block text-muted">
                             <li>Xbox one</li>
                             <li>Playstation</li>
                             <li>PC</li>
@@ -98,8 +100,10 @@
                 </div>
                 <div class="col">
                     <div class="category">
-                        Catégorie
-                        <ul>
+                        <div class="title">Catégories
+                            <div class="plus d-md-none">+</div>
+                        </div>
+                        <ul class="d-none d-md-block text-muted">
                             <li>Actualité</li>
                             <li>Tests</li>
                             <li>Actus mobile</li>
@@ -110,8 +114,10 @@
                 </div>
                 <div class="col">
                     <div class="category">
-                        Sociale
-                        <ul>
+                        <div class="title">Réseaux
+                            <div class="plus d-md-none">+</div>
+                        </div>
+                        <ul class="d-none d-md-block text-muted">
                             <li><i class="bi bi-instagram"></i></li>
                             <li><i class="bi bi-twitter"></i></li>
                             <li><i class="bi bi-facebook"></i></li>
@@ -125,5 +131,6 @@
 
     </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="./assets/script/script.js"></script>
 </body>
 </html>

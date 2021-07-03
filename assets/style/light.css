@@ -27,10 +27,10 @@
 }
 
 .light .category li {
-  color: white;
+  color: inherit;
 }
 
 .light .category li i {
-  color: white;
+  color: inherit;
 }
 /*# sourceMappingURL=light.css.map */

@@ -7,6 +7,7 @@ $yellow: #ff7700;
 body {
     background-color: $bg;
     color: white;
+    padding-bottom: 50px;
     header {
         nav {
             background-color: rgb(10, 10, 10) !important;
@@ -131,13 +132,29 @@ body {
     footer {
         color: white;
         background-color: #181c18;
-        padding-bottom: 70px;
         margin-top: 1rem;
         .category {
             font-size: 1.3rem;
             text-transform: uppercase;
             margin: 1rem 0;
             text-align: center;
+            min-width: 170px;
+            .title {
+            position: relative;
+            color: white;
+                .plus {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    text-align: end;
+                    padding-right: 5px;
+                    color: inherit;
+                    cursor: pointer;
+                }
+            }
+            
         }
         ul {
             list-style: none;
