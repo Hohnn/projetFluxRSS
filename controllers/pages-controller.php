@@ -20,7 +20,12 @@ function displayCard($i, $link, $color)
     $imgUrl = $doc->channel->item[$i]->enclosure["url"];
     $title = $doc->channel->item[$i]->title;
     $desc = $doc->channel->item[$i]->description;
-    $source = $doc->channel->item[$i]->link; ?>
+    $source = $doc->channel->item[$i]->link;
+    $date = $doc->channel->item[$i]->children('dc', true)->date;
+    $format = strftime('%d/%m/%Y', strtotime($date));
+    $formatHeure = strftime('%H:%M', strtotime($date));
+
+?>
     <div class="col-lg-6">
         <div class="card mb-3 mycard <?= $color ?>">
             <div class="row g-0">
@@ -30,10 +35,9 @@ function displayCard($i, $link, $color)
                 <div class="col-md-7">
                     <div class="card-body mybody">
                         <h5 class="card-title"><?= ($title) ?></h5>
-                        <p class="card-text"><small class="text-muted">Date</small></p>
+                        <p class="card-text"><small class="text-muted"><?= ($format) ?></small></p>
                         <div class="link">
-                            <button class="mybtn">Voir plus</button>
-                            <a href="<?= ($source) ?>" class="mybtn">Article</a>
+                            <a href="<?= ($source) ?>" class="mybtn">Aller vers l'article</a>
                         </div>
                     </div>
                 </div>
@@ -43,11 +47,7 @@ function displayCard($i, $link, $color)
 <?php
 }
 
-/* function displayArticle($flux){
-    for ($i = 1; $i <= 12; $i++) {
-        displayCard($i, $flux, 'red');
-    }
-} */
+
 
 function displayArticle($flux)
 {
