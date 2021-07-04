@@ -21,7 +21,7 @@
                     <a class="nav-link" href="<?= isset($_COOKIE['choice2']) ? $subjects[$_COOKIE['choice2']] : 'Tests'  ?>.html"><?= $subjects[$_COOKIE['choice2'] ?? 1]  ?></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= isset($_COOKIE['choice3']) ? $subjects[$_COOKIE['choice3']] : 'Mobiles'  ?>.html" ><?= $subjects[$_COOKIE['choice3'] ?? 2]  ?></a>
+                    <a class="nav-link" href="<?= isset($_COOKIE['choice3']) ? $subjects[$_COOKIE['choice3']] : 'Mobile'  ?>.html" ><?= $subjects[$_COOKIE['choice3'] ?? 2]  ?></a>
                 </li>
                 <li>
                     <a class="nav-link" href="settings.html"><i class="bi bi-gear"></i></a>

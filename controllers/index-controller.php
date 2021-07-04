@@ -7,34 +7,41 @@ $fluxMobile = 'https://www.jeuxactu.com/rss/mobile.rss';
 $fluxMulti = 'https://www.jeuxactu.com/rss/multi.rss';
 setlocale(LC_TIME, "fr_FR", "fra");
 
+$allFlux = [$fluxActus, $fluxTest, $fluxMobile, $fluxPC, $fluxMulti];
+
+$flux1 = isset($_COOKIE['choice1']) ? $allFlux[$_COOKIE['choice1']] : $fluxActus;
+$flux2 = isset($_COOKIE['choice2']) ? $allFlux[$_COOKIE['choice2']] : $fluxTest;
+$flux3 = isset($_COOKIE['choice3']) ? $allFlux[$_COOKIE['choice3']] : $fluxMobile;
 
 
-$docCar = simplexml_load_file($fluxActus);
-$imgUrlCar = $docCar->channel->item[0]->enclosure["url"];
-$titleCar = $docCar->channel->item[0]->title;
-$date = $docCar->channel->item[0]->children('dc', true)->date;
-$format = strftime('%d/%m', strtotime($date));
-$formatHeure = strftime('%H:%M', strtotime($date));
+function imgUrl($flux){
+    $doc = simplexml_load_file($flux);
+    return $doc->channel->item[0]->enclosure["url"];
+}
 
-$docCar2 = simplexml_load_file($fluxMobile);
-$imgUrlCar2 = $docCar2->channel->item[0]->enclosure["url"];
-$titleCar2 = $docCar2->channel->item[0]->title;
-$date2 = $docCar2->channel->item[0]->children('dc', true)->date;
-$format = strftime('%d/%m', strtotime($date2));
-$formatHeure = strftime('%H:%M', strtotime($date2));
+function title($flux){
+    $doc = simplexml_load_file($flux);
+    return $doc->channel->item[0]->title;
+}
 
-$docCar3 = simplexml_load_file($fluxMulti);
-$imgUrlCar3 = $docCar3->channel->item[0]->enclosure["url"];
-$titleCar3 = $docCar3->channel->item[0]->title;
-$date3 = $docCar3->channel->item[0]->children('dc', true)->date;
-$format = strftime('%d/%m', strtotime($date3));
-$formatHeure = strftime('%H:%M', strtotime($date3));
-?>
+function dateFlux($flux){
+    $doc = simplexml_load_file($flux);
+    $date = $doc->channel->item[0]->children('dc', true)->date;
+    $format = strftime('%d/%m', strtotime($date));
+    $formatHeure = strftime('%H:%M', strtotime($date));
+    return "$formatHeure $format";
+}
 
+$subjects =
+    [
+        'Actus',
+        'Tests',
+        'Mobile',
+        'PC',
+        'Multi'
+    ];
 
-
-<?php
-
+    
 
 
 function displayCard($i, $link, $color, $name, $tag)
@@ -84,9 +91,7 @@ function displayCard($i, $link, $color, $name, $tag)
 
 }
 
-$flux1 = $fluxMulti;
-$flux2 = $fluxMobile;
-$flux3 = $fluxTest;
+
 
 $doc = simplexml_load_file($flux1);
 $title = $doc->channel->title;

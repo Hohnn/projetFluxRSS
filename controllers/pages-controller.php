@@ -12,7 +12,17 @@ $fluxTest = 'https://www.jeuxactu.com/rss/tests.rss';
 $fluxMobile = 'https://www.jeuxactu.com/rss/mobile.rss';
 $fluxMulti = 'https://www.jeuxactu.com/rss/multi.rss';
 
-$allFlux = [$fluxPC, $fluxActus, $fluxTest, $fluxMobile, $fluxMulti];
+$allFlux = [$fluxActus, $fluxTest, $fluxMobile, $fluxPC, $fluxMulti];
+
+$subjects =
+    [
+        'Actus',
+        'Tests',
+        'Mobile',
+        'PC',
+        'Multi'
+    ];
+
 
 function displayCard($i, $link, $color)
 {
