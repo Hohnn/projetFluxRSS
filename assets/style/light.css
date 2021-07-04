@@ -2,7 +2,7 @@
   background-color: #f7f7f2;
 }
 
-.light * {
+.light *:not(button) {
   color: black;
 }
 

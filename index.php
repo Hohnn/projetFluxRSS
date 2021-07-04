@@ -110,7 +110,7 @@
                             <li>Tests</li>
                             <li>Actus mobile</li>
                             <li>Actus PC</li>
-                            <li>Sorties</li>
+                            <li>Multijoueurs</li>
                         </ul>
                     </div>
                 </div>

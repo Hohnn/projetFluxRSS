@@ -3,7 +3,7 @@
 
 
 .light {
-    * {
+    *:not(button) {
         color: black;
     }
     background-color: #f7f7f2;

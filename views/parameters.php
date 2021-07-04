@@ -18,7 +18,7 @@
     <?php include '../navbar.php' ?>
 
     </header>
-    <h1>Paramètre </h1>
+    <h1 class="text-uppercase mb-4">Paramètre </h1>
     <div class="cardPara">
             <form action="" method="post">
                     <div class="form-check form-switch">
@@ -45,7 +45,7 @@
                         <input class="case" onclick="doAction()" type="checkbox" id="option4" name="option_list[]" value="3" <?= isset($_COOKIE['myChoices']) ? (preg_match('/(3)/', $_COOKIE['myChoices']) ? 'checked' : '') : ''  ?>>
                         <label for="option4">Actus PC</label><br>
                         <input class="case" onclick="doAction()" type="checkbox" id="option5" name="option_list[]" value="4" <?= isset($_COOKIE['myChoices']) ? (preg_match('/(4)/', $_COOKIE['myChoices']) ? 'checked' : '') : ''  ?>>
-                        <label for="option5">Les sorties</label><br>
+                        <label for="option5">Actus multijoueurs</label><br>
                         <p class="text-danger"><?= $error ?? '' ?></p>
                         <button type="submit" class="btn btn-secondary">Valider</button>
                     </div>
