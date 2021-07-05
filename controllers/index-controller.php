@@ -41,9 +41,6 @@ $subjects =
         'Multi'
     ];
 
-    
-
-
 function displayCard($i, $link, $color, $name, $tag)
 {
     $doc = simplexml_load_file($link);
@@ -105,8 +102,7 @@ function category($flux){
 
 
 
-function displayArticle($flux1, $flux2, $flux3)
-{
+function displayArticle($flux1, $flux2, $flux3){
     $subjects =
     [
         'Actus',
@@ -129,7 +125,7 @@ function displayArticle($flux1, $flux2, $flux3)
 
 $themeClass = '';
 if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'light') {
-  $themeClass = 'light';
+    $themeClass = 'light';
 }
 
 ?>
