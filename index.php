@@ -25,36 +25,36 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="<?= $imgUrlCar ?>" class="d-block w-100" alt="..." data-bs-toggle="modal" data-bs-target="#flux10">
-                <div class="carousel-caption myCarouselCaption d-md-none"><?= $titleCar ?></div>
+                <img src="<?= imgUrl($flux1) ?>" class="d-block w-100" alt="..." data-bs-toggle="modal" data-bs-target="#flux10">
+                <div class="carousel-caption myCarouselCaption d-md-none"><?= title($flux1) ?></div>
                 <div class="carousel-caption d-none d-md-block myCarousel">
                     <div class="top">
-                        <div class="tag">ACTUS PC</div>
-                        <div class="date"><?=  $date ?></div>
+                        <div class="tag"><?= $subjects[$_COOKIE['choice1'] ?? 0] ?></div>
+                        <div class="date"><?= dateFlux($flux1) ?></div>
                     </div>
-                    <h5><?= $titleCar ?></h5>
+                    <h5><?= title($flux1) ?></h5>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="<?= $imgUrlCar2 ?>" class="d-block w-100" alt="..." data-bs-toggle="modal" data-bs-target="#flux20">
-                <div class="carousel-caption myCarouselCaption d-md-none"><?= $titleCar2 ?></div>
+                <img src="<?= imgUrl($flux2) ?>" class="d-block w-100" alt="..." data-bs-toggle="modal" data-bs-target="#flux20">
+                <div class="carousel-caption myCarouselCaption d-md-none"><?= title($flux2) ?></div>
                 <div class="carousel-caption d-none d-md-block myCarousel">
                     <div class="top">
-                        <div class="tag">ACTUS PC</div>
-                        <div class="date"><?=  $date2 ?></div>
+                        <div class="tag"><?= $subjects[$_COOKIE['choice2'] ?? 1] ?></div>
+                        <div class="date"><?= dateFlux($flux2) ?></div>
                     </div>
-                    <h5><?= $titleCar2 ?></h5>
+                    <h5><?= title($flux2)  ?></h5>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="<?= $imgUrlCar3 ?>" class="d-block w-100" alt="..." data-bs-toggle="modal" data-bs-target="#flux30">
-                <div class="carousel-caption myCarouselCaption d-md-none"><?= $titleCar3 ?></div>
+                <img src="<?= imgUrl($flux3) ?>" class="d-block w-100" alt="..." data-bs-toggle="modal" data-bs-target="#flux30">
+                <div class="carousel-caption myCarouselCaption d-md-none"><?= title($flux3) ?></div>
                 <div class="carousel-caption d-none d-md-block myCarousel">
                     <div class="top">
-                        <div class="tag">ACTUS PC</div>
-                        <div class="date"><?=  $date3 ?></div>
+                        <div class="tag"><?= $subjects[$_COOKIE['choice3'] ?? 2] ?></div>
+                        <div class="date"><?= dateFlux($flux3) ?></div>
                     </div>
-                    <h5><?= $titleCar3 ?></h5>
+                    <h5><?= title($flux3) ?></h5>
                 </div>
             </div>
         </div>

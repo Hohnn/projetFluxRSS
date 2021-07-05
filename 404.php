@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Lobster&family=Poiret+One&display=swap" rel="stylesheet">
     <link href="./assets/style/style404.css" rel="stylesheet">
-    <title>Document</title>
+    <title>Page ERROR</title>
 </head>
 
 <body>

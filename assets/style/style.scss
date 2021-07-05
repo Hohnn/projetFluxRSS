@@ -80,7 +80,7 @@ body {
             }
             .desc {
                 text-transform: uppercase;
-                white-space: nowrap;
+                max-width: 100%;
             }
             
         }
@@ -211,8 +211,6 @@ body {
             background-color: rgba(255, 255, 255, 0.164);
         }
     }
-    
-    
 }
 
 .parameters {

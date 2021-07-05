@@ -85,7 +85,7 @@ body main .title .tag {
 
 body main .title .desc {
   text-transform: uppercase;
-  white-space: nowrap;
+  max-width: 100%;
 }
 
 body main .neutreTag::before {

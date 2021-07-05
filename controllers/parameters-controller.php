@@ -1,17 +1,9 @@
 <?php 
-$subjects =
-[
-    'Actus',
-    'Tests',
-    'Mobile',
-    'PC',
-    'Sorties'
-];
 
-$choice1 = 0;
+/* $choice1 = 0;
 $choice2 = 2;
 $choice3 = 4;
-
+ */
 //prise en compte des choix en fonction des cookies//
 
 /* if (isset($_COOKIE['myChoices'])) {
