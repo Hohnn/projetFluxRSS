@@ -1,6 +1,20 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+ 
+ body {
+     display: flex;
+     align-items: center;
+     height: 100vh;
+     width: 100vw;
+     justify-content: center;
+ }
+ 
  .pageError {
      text-align: center;
-     top: center;
+     font-size: larger;
  }
  
  .errorcode {
@@ -8,14 +22,12 @@
      font-size: 3em;
  }
  
- .error {
-     font-family: 'Lobster', cursive;
- }
- 
  .eror {
      font-family: 'Handlee', cursive;
      font-family: 'Lobster', cursive;
      font-family: 'Poiret One', cursive;
+     font-family: 'Titillium Web', sans-serif;
+     font-weight: bold;
  }
  
  .but {
