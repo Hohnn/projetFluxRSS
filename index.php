@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./assets/style/style.css">
     <link rel="stylesheet" href="./assets/style/light.css">
-    <title>Vidéo Game News</title>
+    <title>Video Game News</title>
 </head>
 <body class="<?= $themeClass ?>">
     <header>

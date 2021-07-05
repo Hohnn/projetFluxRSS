@@ -11,7 +11,7 @@
 
 <nav class="navbar navbar-expand navbar-dark fixed-bottom w-100">
     <div class="container-fluid">
-        <a class="navbar-brand" href="accueil.html"><i class="bi bi-house"></i></a>
+        <a class="navbar-brand" href="accueil.html" style="width: 4rem;"><img src="assets/img/logo2.png" style="width: 100%;"></a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav w-100 justify-content-around mb-lg-0 text-uppercase">
                 <li class="nav-item">
