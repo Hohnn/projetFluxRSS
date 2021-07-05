@@ -1,0 +1,36 @@
+ .pageError {
+     text-align: center;
+     top: center;
+ }
+ 
+ .errorcode {
+     font-family: 'Lobster', cursive;
+     font-size: 3em;
+ }
+ 
+ .error {
+     font-family: 'Lobster', cursive;
+ }
+ 
+ .eror {
+     font-family: 'Handlee', cursive;
+     font-family: 'Lobster', cursive;
+     font-family: 'Poiret One', cursive;
+ }
+ 
+ .but {
+     background-color: rgb(59, 57, 57);
+     border: none;
+     color: white;
+     padding: 5px 12px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 16px;
+     margin: 4px 2px;
+     cursor: pointer;
+     border-top-left-radius: 20px 20px;
+     border-top-right-radius: 20px 20px;
+     border-bottom-left-radius: 20px 20px;
+     border-bottom-right-radius: 20px 20px;
+ }
